@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IsovenBest Admin Panel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Age Warning Screen -->
+  <div id="ageWarning" class="overlay">
+    <div class="warning-box">
+      <h1>⚠️ Warning: Age Restricted</h1>
+      <p>You must be 18+ to enter.</p>
+      <button onclick="enterSite()">Enter</button>
+      <button onclick="exitSite()">Exit</button>
+    </div>
+  </div>
+
+  <!-- Main Panel -->
+  <div id="mainPanel" class="panel hidden">
+    <h1>IsovenBest Admin Panel</h1>
+    <div class="categories">
+      <div class="category">
+        <div class="title">REAL Highscl</div>
+        <button class="upload-btn">Upload</button>
+        <button class="plus-btn" onclick="adminAlert()">+</button>
+      </div>
+      <div class="category">
+        <div class="title">RPE</div>
+        <button class="upload-btn">Upload</button>
+        <button class="plus-btn" onclick="adminAlert()">+</button>
+      </div>
+      <div class="category">
+        <div class="title">M&S</div>
+        <button class="upload-btn">Upload</button>
+        <button class="plus-btn" onclick="adminAlert()">+</button>
+      </div>
+      <div class="category">
+        <div class="title">F&D</div>
+        <button class="upload-btn">Upload</button>
+        <button class="plus-btn" onclick="adminAlert()">+</button>
+      </div>
+      <div class="category">
+        <div class="title">Z000</div>
+        <button class="upload-btn">Upload</button>
+        <button class="plus-btn" onclick="adminAlert()">+</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function enterSite() {
+      document.getElementById('ageWarning').classList.add('hidden');
+      document.getElementById('mainPanel').classList.remove('hidden');
+    }
+    function exitSite() {
+      alert('You will now leave the site.');
+      window.location.href = 'https://www.google.com';
+    }
+    function adminAlert() {
+      alert('Only admin can perform this operation.');
+    }
+  </script>
+</body>
+</html>
